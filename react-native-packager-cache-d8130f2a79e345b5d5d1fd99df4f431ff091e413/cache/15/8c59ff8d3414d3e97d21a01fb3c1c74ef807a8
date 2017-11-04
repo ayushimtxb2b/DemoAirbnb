@@ -1,0 +1,333 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/cloudzeg/Desktop/ReactNative/Sample/DemoAirbnb/Splash.js',
+    _class,
+    _temp;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Login = require('./Login');
+
+var _Login2 = _interopRequireDefault(_Login);
+
+var _SignUp = require('./SignUp');
+
+var _SignUp2 = _interopRequireDefault(_SignUp);
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  Splash: {
+    displayName: 'Splash'
+  },
+  MyScene: {
+    displayName: 'MyScene'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/cloudzeg/Desktop/ReactNative/Sample/DemoAirbnb/Splash.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var Splash = _wrapComponent('Splash')(function (_Component) {
+  _inherits(Splash, _Component);
+
+  function Splash() {
+    _classCallCheck(this, Splash);
+
+    return _possibleConstructorReturn(this, (Splash.__proto__ || Object.getPrototypeOf(Splash)).apply(this, arguments));
+  }
+
+  _createClass(Splash, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(_reactNative.NavigatorIOS, {
+        initialRoute: {
+          component: MyScene,
+          title: '',
+          passProps: { index: 1 }
+        },
+        style: { flex: 1 },
+        navigationBarHidden: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        }
+      });
+    }
+  }]);
+
+  return Splash;
+}(_react2.Component));
+
+exports.default = Splash;
+
+var MyScene = _wrapComponent('MyScene')((_temp = _class = function (_Component2) {
+  _inherits(MyScene, _Component2);
+
+  function MyScene(props, context) {
+    _classCallCheck(this, MyScene);
+
+    var _this2 = _possibleConstructorReturn(this, (MyScene.__proto__ || Object.getPrototypeOf(MyScene)).call(this, props, context));
+
+    _this2._onLoginTouched = _this2._onLoginTouched.bind(_this2);
+    _this2._onSIgnUpTOuched = _this2._onSIgnUpTOuched.bind(_this2);
+    return _this2;
+  }
+
+  _createClass(MyScene, [{
+    key: '_onLoginTouched',
+    value: function _onLoginTouched() {
+      var nextIndex = ++this.props.index;
+      this.props.navigator.push({
+        component: _Login2.default,
+        title: 'Login Page',
+        passProps: { index: nextIndex }
+      });
+    }
+  }, {
+    key: '_onSIgnUpTOuched',
+    value: function _onSIgnUpTOuched() {
+      var nextIndex = ++this.props.index;
+      this.props.navigator.push({
+        component: _SignUp2.default,
+        title: 'SignUp Page',
+        passProps: { index: nextIndex }
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 67
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.topButton, onPress: this._onLoginTouched, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 68
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.topButtonText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 69
+              }
+            },
+            'Log In'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.logoContiner, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 71
+            }
+          },
+          _react3.default.createElement(_reactNative.Image, {
+            style: styles.logo,
+            source: require('./Images/logo.png'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 72
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: styles.welcome, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 77
+            }
+          },
+          'Welcome to Mtx!'
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.buttonContainer, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 81
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.buttonText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 82
+              }
+            },
+            'Continue with Facebook'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.buttonAccountContainer, onPress: this._onSIgnUpTOuched, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 85
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.buttonAccountText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 86
+              }
+            },
+            'Create Account'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: styles.welcome, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 89
+            }
+          },
+          'More options'
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: styles.cotiuneAccount, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 92
+            }
+          },
+          'By tapping Continue,Create Account or more options,I agree to Mtx\'s Terms of service,Payments Terms of Service and Privacy Policy.'
+        )
+      );
+    }
+  }]);
+
+  return MyScene;
+}(_react2.Component), _class.propTypes = {
+  route: _propTypes2.default.shape({
+    title: _propTypes2.default.string.isRequired
+  }),
+  navigator: _propTypes2.default.object.isRequired
+}, _temp));
+
+var styles = _reactNative.StyleSheet.create({
+  topButton: {
+    position: 'absolute',
+    right: 20,
+    top: 40
+
+  },
+  topButtonText: {
+    fontSize: 15,
+    color: 'white',
+    textAlign: 'center'
+  },
+  logoContiner: {
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    flexDirection: 'row'
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    tintColor: 'white'
+  },
+
+  textMargin: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+
+  buttonContainer: {
+    backgroundColor: '#F4F7FB',
+    paddingVertical: 10,
+    width: 280,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: 'white',
+    height: 40,
+    borderRadius: 10
+  },
+  buttonText: {
+    fontSize: 15,
+    color: '#125061',
+    textAlign: 'center'
+  },
+
+  buttonAccountContainer: {
+    paddingVertical: 10,
+    width: 280,
+    marginBottom: 20,
+    height: 40,
+    borderWidth: 1,
+    borderColor: 'white',
+    borderRadius: 10
+  },
+
+  buttonAccountText: {
+    fontSize: 15,
+    color: 'white',
+    textAlign: 'center'
+  },
+  container: {
+    padding: 20,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#026D7E'
+  },
+  welcome: {
+    fontSize: 17,
+    textAlign: 'left',
+    marginTop: 10,
+    width: 280,
+    marginBottom: 10,
+    color: 'white'
+  },
+  cotiuneAccount: {
+    fontSize: 11,
+    textAlign: 'left',
+    marginTop: 10,
+    width: 280,
+    marginBottom: 10,
+    color: 'white'
+  },
+
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  }
+});

@@ -1,0 +1,329 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _class,
+    _temp,
+    _jsxFileName = '/Users/cloudzeg/Desktop/ReactNative/Sample/DemoAirbnb/Login.js';
+
+var _SignUp = require('./SignUp');
+
+var _SignUp2 = _interopRequireDefault(_SignUp);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  Login: {
+    displayName: 'Login'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/cloudzeg/Desktop/ReactNative/Sample/DemoAirbnb/Login.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var NextPage = require('./SignUp.js');
+
+var Login = _wrapComponent('Login')((_temp = _class = function (_Component) {
+  _inherits(Login, _Component);
+
+  function Login(props) {
+    _classCallCheck(this, Login);
+
+    var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+
+    _this._onBackTouched = _this._onBackTouched.bind(_this);
+    _this._onForgotPassowrdTouched = _this._onForgotPassowrdTouched.bind(_this);
+
+    return _this;
+  }
+
+  _createClass(Login, [{
+    key: '_onBackTouched',
+    value: function _onBackTouched() {
+      this.props.navigator.pop();
+    }
+  }, {
+    key: '_onForgotPassowrdTouched',
+    value: function _onForgotPassowrdTouched() {}
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _reactNative.KeyboardAvoidingView,
+        { behavior: 'padding', style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.topRightButton, onPress: this._onForgotPassowrdTouched, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 52
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.buttonTextAccount, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 53
+              }
+            },
+            'Forgot Password'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.topLeftButton, onPress: this._onBackTouched, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 55
+            }
+          },
+          _react3.default.createElement(_reactNative.Image, {
+            style: styles.loginBackIcon,
+            source: require('./Images/left_arrow.png'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 56
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: styles.welcome, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 61
+            }
+          },
+          'LOGIN'
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 64
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.inputLabel, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 65
+              }
+            },
+            'EMAIL ADDRESS'
+          ),
+          _react3.default.createElement(_reactNative.TextInput, {
+            keyboardType: 'email-address',
+            returnKeyType: 'next',
+            style: styles.input,
+            onSubmitEditing: function onSubmitEditing() {
+              return _this2.passwordInput.focus();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 68
+            }
+          }),
+          _react3.default.createElement(_reactNative.View, { style: styles.bottomLine, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 74
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 76
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.inputLabel, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 77
+              }
+            },
+            'PASSWORD'
+          ),
+          _react3.default.createElement(_reactNative.TextInput, {
+            secureTextEntry: true,
+            returnKeyType: 'done',
+            style: styles.input,
+            ref: function ref(input) {
+              return _this2.passwordInput = input;
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 80
+            }
+          }),
+          _react3.default.createElement(_reactNative.View, { style: styles.bottomLine, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 86
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.loginButtonContainer, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 89
+            }
+          },
+          _react3.default.createElement(_reactNative.Image, {
+            style: styles.loginButtonIcon,
+            source: require('./Images/bluearrow.png'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 90
+            }
+          })
+        )
+      );
+    }
+  }]);
+
+  return Login;
+}(_react2.Component), _class.propTypes = {
+  route: _propTypes2.default.shape({
+    title: _propTypes2.default.string.isRequired
+  }),
+  navigator: _propTypes2.default.object.isRequired
+}, _temp));
+
+exports.default = Login;
+
+
+var styles = _reactNative.StyleSheet.create({
+  topLeftButton: {
+    position: 'absolute',
+    left: 20,
+    top: 40
+
+  },
+  topRightButton: {
+    position: 'absolute',
+    right: 20,
+    top: 40
+
+  },
+  loginButtonContainer: {
+    width: 50,
+    height: 50,
+    bottom: 10,
+    right: 10,
+    position: 'absolute'
+  },
+  loginButtonIcon: {
+    width: 50,
+    height: 50
+  },
+  loginBackIcon: {
+    width: 20,
+    height: 20,
+    tintColor: 'white'
+  },
+  inputLabel: {
+    textAlign: 'left',
+    marginTop: 10,
+    width: 280,
+    marginBottom: 0,
+    color: 'white'
+  },
+  bottomLine: {
+    height: 1,
+    width: 280,
+    backgroundColor: '#2D7F8C'
+  },
+  buttonContainer: {
+    backgroundColor: '#2980b9',
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    width: 280,
+    marginTop: 10,
+    marginBottom: 10,
+    height: 46
+  },
+
+  buttonText: {
+    fontSize: 20,
+    color: 'white',
+    textAlign: 'center'
+  },
+  buttonTextAccount: {
+    fontSize: 15,
+    color: 'white',
+    textAlign: 'center'
+  },
+  buttonAccount: {
+    paddingVertical: 15,
+    width: 290
+  },
+  input: {
+    height: 40,
+    marginBottom: 0,
+    borderWidth: 0,
+    width: 280,
+    color: 'white',
+    paddingHorizontal: 0
+
+  },
+  container: {
+    padding: 20,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#026D7E'
+  },
+  welcome: {
+    textAlign: 'left',
+    marginTop: 10,
+    width: 280,
+    fontSize: 17,
+    marginBottom: 10,
+    color: 'white'
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  }
+});

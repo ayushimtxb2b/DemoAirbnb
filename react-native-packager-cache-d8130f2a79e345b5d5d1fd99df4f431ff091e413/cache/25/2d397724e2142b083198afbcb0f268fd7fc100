@@ -1,0 +1,304 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/cloudzeg/Desktop/ReactNative/Sample/DemoAirbnb/SignUp.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _Login = require('./Login');
+
+var _Login2 = _interopRequireDefault(_Login);
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  SignUp: {
+    displayName: 'SignUp'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/cloudzeg/Desktop/ReactNative/Sample/DemoAirbnb/SignUp.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var SignUp = _wrapComponent('SignUp')(function (_Component) {
+  _inherits(SignUp, _Component);
+
+  function SignUp(props) {
+    _classCallCheck(this, SignUp);
+
+    var _this = _possibleConstructorReturn(this, (SignUp.__proto__ || Object.getPrototypeOf(SignUp)).call(this, props));
+
+    _this._onLoginTouched = _this._onLoginTouched.bind(_this);
+    _this._onBackTouched = _this._onBackTouched.bind(_this);
+
+    return _this;
+  }
+
+  _createClass(SignUp, [{
+    key: '_onBackTouched',
+    value: function _onBackTouched() {
+      this.props.navigator.pop();
+    }
+  }, {
+    key: '_onLoginTouched',
+    value: function _onLoginTouched() {
+      this.props.navigator.push({
+        component: _Login2.default,
+        title: ''
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _reactNative.KeyboardAvoidingView,
+        { behavior: 'padding', style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40
+          }
+        },
+        _react3.default.createElement(_reactNative.Image, {
+          style: styles.logo,
+          source: require('./Images/logo.png'),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          }
+        }),
+        _react3.default.createElement(_reactNative.Text, { style: styles.welcome, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
+          }
+        }),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.topLeftButton, onPress: this._onBackTouched, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 47
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.buttonTextAccount, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 48
+              }
+            },
+            'Back'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 50
+            }
+          },
+          _react3.default.createElement(_reactNative.TextInput, {
+            placeholder: 'Name',
+            placeholderTextColor: '#FFF',
+            returnKeyType: 'next',
+            style: styles.input,
+            onSubmitEditing: function onSubmitEditing() {
+              return _this2.emailInput.focus();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 51
+            }
+          })
+        ),
+        _react3.default.createElement(_reactNative.TextInput, {
+          placeholder: 'Email',
+          placeholderTextColor: '#FFF',
+          returnKeyType: 'next',
+          keyboardType: 'email-address',
+          style: styles.input,
+          ref: function ref(input) {
+            return _this2.emailInput = input;
+          },
+          onSubmitEditing: function onSubmitEditing() {
+            return _this2.phoneInput.focus();
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59
+          }
+        }),
+        _react3.default.createElement(_reactNative.TextInput, {
+          placeholder: 'Phone No',
+          placeholderTextColor: '#FFF',
+          returnKeyType: 'next',
+          keyboardType: 'phone-pad',
+          style: styles.input,
+          ref: function ref(input) {
+            return _this2.phoneInput = input;
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 69
+          }
+        }),
+        _react3.default.createElement(_reactNative.TextInput, {
+          placeholder: 'Password',
+          placeholderTextColor: '#FFF',
+          returnKeyType: 'next',
+          secureTextEntry: true,
+          style: styles.input,
+          onSubmitEditing: function onSubmitEditing() {
+            return _this2.confirmpasswordInput.focus();
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78
+          }
+        }),
+        _react3.default.createElement(_reactNative.TextInput, {
+          placeholder: 'Confirm Password',
+          placeholderTextColor: '#FFF',
+          returnKeyType: 'done',
+          secureTextEntry: true,
+          style: styles.input,
+          ref: function ref(input) {
+            return _this2.confirmpasswordInput = input;
+          },
+
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 87
+          }
+        }),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.buttonContainer, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 97
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.buttonText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 98
+              }
+            },
+            'SIGNUP'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { style: styles.buttonAccount, onPress: this._onLoginTouched, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 101
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.buttonTextAccount, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 102
+              }
+            },
+            'Already have an account?'
+          )
+        )
+      );
+    }
+  }]);
+
+  return SignUp;
+}(_react2.Component));
+
+exports.default = SignUp;
+
+
+var styles = _reactNative.StyleSheet.create({
+  buttonContainer: {
+    backgroundColor: '#2980b9',
+    paddingVertical: 15,
+    width: 290
+  },
+  topLeftButton: {
+    position: 'absolute',
+    left: 20,
+    top: 40
+
+  },
+  buttonText: {
+    fontSize: 20,
+    color: 'white',
+    textAlign: 'center'
+  },
+  buttonTextAccount: {
+    fontSize: 16,
+    color: '#2980b9',
+    textAlign: 'center'
+  },
+  buttonAccount: {
+    paddingVertical: 15,
+    width: 290
+  },
+  input: {
+    height: 40,
+    backgroundColor: '#C1F1F1',
+    marginBottom: 20,
+    borderWidth: 0,
+    width: 290,
+    color: 'white',
+    paddingHorizontal: 10
+
+  },
+  logo: {
+    width: 100,
+    height: 100
+  },
+  container: {
+    padding: 20,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFF'
+  },
+  welcome: {
+    textAlign: 'center',
+    marginTop: 5,
+    marginBottom: 10,
+    width: 190,
+    opacity: 0.7
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  }
+});
